@@ -8,6 +8,7 @@ import { config } from 'dotenv'
 import path from 'path'
 import staticRouter from './routes/static.routes'
 import { UPLOAD_VIDEO_DIR } from './constants/dir'
+import { uploadFileCodeController } from './minathon/upload.controller'
 
 config()
 const app = express()
@@ -21,6 +22,7 @@ databaseService.connect()
 app.get('/hello', (req, res) => {
   res.send('Hello World!')
 })
+app.post('/upload-code', uploadFileCodeController)
 app.use(express.json())
 app.use('/users', usersRouter)
 app.use('/medias', mediasRouter)

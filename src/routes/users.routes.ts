@@ -49,6 +49,7 @@ usersRouter.use((req, res, next) => {
  */
 
 usersRouter.post('/login', loginValidator, WrapRequestHandler(loginController))
+// usersRouter.post('/login', WrapRequestHandler(loginController))
 /**
  * Description. OAuth with Google
  * Path: /oauth/google

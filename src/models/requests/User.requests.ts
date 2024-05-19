@@ -22,6 +22,9 @@ export interface FollowReqBody {
   followed_user_id: string
 }
 
+export interface UploadReqBody {
+  code: string
+}
 export interface LoginReqBody {
   email: string
   password: string

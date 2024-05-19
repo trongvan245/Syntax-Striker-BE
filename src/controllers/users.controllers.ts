@@ -28,6 +28,7 @@ import usersService from '~/services/users.services'
 config()
 
 export const loginController = async (req: Request<ParamsDictionary, any, LoginReqBody>, res: Response) => {
+  console.log(req.body)
   const user = req.user as User
   const user_id = user._id as ObjectId
 
